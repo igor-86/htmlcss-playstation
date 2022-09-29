@@ -2,6 +2,7 @@
 img {
     max-width: 100%;
 }
+
 /* Custom */
 .mc_image {
     height: 900px;
@@ -14,6 +15,14 @@ img {
     bottom: 200px;
     left: 10px;
 }
+
+/* DEBUG */
+
+.card-debug {
+    
+    border: 1px solid red;
+}
+
 
 /* ******Header******** */
 .menu {
@@ -56,9 +65,40 @@ img {
     object-position: right;
 }
 
+/* News */
+.img-box-news {
+    width: 100%;
+    height: 100%;
+    /* debug */
+    background-color: red;
+}
+.img-box-news > img {
+    width: 100%;
+    height:100%;
+    object-fit:cover;
+    object-position: center;
+}
 
 
 /* Footer */
 
 
 /* *****media queris****** */
+
+/* Media Sm Smart */
+@media screen and (min-width:576px) {
+    
+}
+
+/* Media MD tablet */
+@media screen and (min-width:768px) {
+    .mc_box-image {
+        width: 85%;
+    }
+}
+/* media XL Desktop */
+@media screen and (min-width:1200px) {
+    .mc_box-image {
+        width: 30%;
+    }
+}
