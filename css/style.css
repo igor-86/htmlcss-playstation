@@ -12,23 +12,58 @@ a {
 /* Custom */
 .mc_image {
     height: 900px;
-    position: relative;
 }
 .mc_box-image {
     position: absolute;
     z-index: 1;
     border: 1px solid red;
-    bottom: 200px;
-    left: 10px;
+    bottom: 180px;
+    left:0;
+}
+.mc_p-relative {
+    position: relative;
 }
 .mc_b-color-blue {
     background-color: rgb(2, 2, 43);
 }
+.mc_fs-small {
+    font-size: .9rem;
+}
+.mc_text-gray {
+    color: #727272;
+}
+.mc_active {
+    border-bottom: 1px solid #2D64E6;
+    color: #1F1F1F;
+}
+
+/* BTN */
+.mc_color1 {
+    background-color: #CD3D0F;
+}
+ .mc_color2 {
+    background-color: #2D64E6;
+}
+.mc_color3 {
+    background-color: #1F1F1F;
+}
+.mc_color-plus {
+    background-color: #BEBCBB;
+}
+.mc_color4 {
+    background-color: #D9DADC;
+}
+.mc_color-now {
+    background-color: #161C3B;
+}
+.mc_color-footer {
+    background-color: #00439C;
+} 
+
+
 /* DEBUG */
 
-.card-debug {
-    border: 1px solid red;
-}
+
 
 
 /* ******Header******** */
@@ -40,9 +75,16 @@ a {
     z-index: 999;
 }
 .header-top {
-    width: 100%;
-    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     background-color: black;
+    padding-top: .5rem;
+    padding-right: .5rem;
+    padding-bottom: .5rem;
+}
+.mc_logo-sony {
+    width: 100px;
 }
 .header-top > .logo-top {
     width: 20%;
@@ -50,37 +92,72 @@ a {
     /* Debug */
     border: 1px solid white;
     margin-left: auto;
+}
+.btn > img {
+    width: 1.3em;
+}
+
+/* Chevron menu */
+
+.mc_dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: middle;
+    content: "\f078";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
     
 }
 
 /* *****Main****** */
 
 /* Section top */
-.img-box {
-    width: 100%;
-    height: 100%;
-    /* debug */
-    background-color: red;
+.mc_section-home {
+    margin-top: 6rem;
 }
-.img-box img {
-    width: 100%;
-    height:100%;
-    object-fit:cover;
-    object-position: right;
+.mc_home {
+    background-image: url("../img/jumbo-bg.png");
+    background-size: cover;
+    background-position: center;
+    padding-top: 25rem;
+    
+}
+.mc_title-home {
+    padding-bottom: 3rem;
+}
+.mc_banner-logo {
+    width: 50%;
+}
+/* Products */
+.mc_text-play {
+    color: #2D64E6;
 }
 
 /* News */
-.img-box-news {
+
+.mc_news {
+    background-image: url("../img/it-takes-two-hero-banner-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0;
+    position: relative;
+}
+/* contrast */
+.mc_news::before {
+    content: '';
+    position: absolute;
+    z-index: 10;
+    background-color: black;
+    opacity: .3;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    /* debug */
-    background-color: red;
 }
-.img-box-news > img {
-    width: 100%;
-    height:100%;
-    object-fit:cover;
-    object-position: center;
+.mc_title-news {
+    padding:1rem;
+    position: relative;
+    z-index: 20;
 }
 
 /* Playstation Plus */
@@ -116,14 +193,26 @@ a {
 
 /* Media MD tablet */
 @media screen and (min-width:768px) {
-    .mc_box-image {
-        width: 85%;
+    .mc_title-product {
+        width: 90%;
+      }
+      .card-product > img {
+        width: 70%;
+        text-align: center;
     }
-   
+    /* Explore */
+      .mc_min-height {
+        height: 4.5rem;
+    
+    }
 }
 /* media XL Desktop */
 @media screen and (min-width:1200px) {
-    .mc_box-image {
-        width: 30%;
-    }
+  .mc_home {
+    padding-top: 30rem;
+  }
+  .mc_title-product {
+    width: 50%;
+  }
 }
+
