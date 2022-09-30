@@ -9,7 +9,7 @@ a {
     text-decoration: none;
     color: white;
 }
-/* Custom */
+/* Custom style class */
 .mc_image {
     height: 900px;
 }
@@ -37,7 +37,7 @@ a {
     color: #1F1F1F;
 }
 
-/* BTN */
+/* COLORS */
 .mc_color1 {
     background-color: #CD3D0F;
 }
@@ -59,9 +59,17 @@ a {
 .mc_color-footer {
     background-color: #00439C;
 } 
+/* HOVER EFFECTS */
+/* Bottom effects */
+
+.mc_btn {
+    padding: 0.375rem 0.75rem;
+}
+.card-home:hover {
+    margin-top: -10px;
+}
 
 
-/* DEBUG */
 
 
 
@@ -127,6 +135,9 @@ a {
 }
 .mc_banner-logo {
     width: 50%;
+}
+.card-home {
+    transition: all .5s ease-out;
 }
 /* Products */
 .mc_text-play {
